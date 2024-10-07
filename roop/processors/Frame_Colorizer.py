@@ -29,9 +29,9 @@ class Frame_Colorizer():
             # replace Mac mps with cpu for the moment
             self.devicename = self.plugin_options["devicename"].replace('mps', 'cpu')
             if self.prev_type == "deoldify_artistic":
-                model_path = resolve_relative_path('../models/Frame/deoldify_artistic.onnx')
+                model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/deoldify_artistic.onnx')
             elif self.prev_type == "deoldify_stable":
-                model_path = resolve_relative_path('../models/Frame/deoldify_stable.onnx')
+                model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/deoldify_stable.onnx')
 
             onnxruntime.set_default_logger_severity(3)
             self.model_colorizer = onnxruntime.InferenceSession(model_path, None, providers=roop.globals.execution_providers)

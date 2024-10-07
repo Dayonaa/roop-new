@@ -26,7 +26,7 @@ class Frame_Masking():
             # replace Mac mps with cpu for the moment
             self.devicename = self.plugin_options["devicename"]
             self.devicename = self.devicename.replace('mps', 'cpu')
-            model_path = resolve_relative_path('../models/Frame/isnet-general-use.onnx')
+            model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/isnet-general-use.onnx')
             self.model_masking = onnxruntime.InferenceSession(model_path, None, providers=roop.globals.execution_providers)
             self.model_inputs = self.model_masking.get_inputs()
             model_outputs = self.model_masking.get_outputs()
