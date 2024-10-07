@@ -26,7 +26,7 @@ class Enhance_GPEN():
 
         self.plugin_options = plugin_options
         if self.model_gpen is None:
-            model_path = resolve_relative_path('/kaggle/working/roop-new/models/GPEN-BFR-512.onnx')
+            model_path = resolve_relative_path('/content/drive/MyDrive/roop-new/models/GPEN-BFR-512.onnx')
             self.model_gpen = onnxruntime.InferenceSession(model_path, None, providers=roop.globals.execution_providers)
             # replace Mac mps with cpu for the moment
             self.devicename = self.plugin_options["devicename"].replace('mps', 'cpu')
