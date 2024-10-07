@@ -224,7 +224,7 @@ def resolve_relative_path(path: str) -> str:
 
 def get_device() -> str:
     if len(roop.globals.execution_providers) < 1:
-        roop.globals.execution_providers = ["CPUExecutionProvider"]
+        roop.globals.execution_providers = ["CUDAExecutionProvider"]
 
     prov = roop.globals.execution_providers[0]
     if "CoreMLExecutionProvider" in prov:
