@@ -32,13 +32,13 @@ class Frame_Upscale():
             # replace Mac mps with cpu for the moment
             self.devicename = self.plugin_options["devicename"].replace('mps', 'cpu')
             if self.prev_type == "esrganx4":
-                model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/real_esrgan_x4.onnx')
+                model_path = resolve_relative_path('../models/Frame/real_esrgan_x4.onnx')
                 self.scale = 4
             elif self.prev_type == "esrganx2":
-                model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/real_esrgan_x2.onnx')
+                model_path = resolve_relative_path('../models/Frame/real_esrgan_x2.onnx')
                 self.scale = 2
             elif self.prev_type == "lsdirx4":
-                model_path = resolve_relative_path('/kaggle/working/roop-new/models/Frame/lsdir_x4.onnx')
+                model_path = resolve_relative_path('../models/Frame/lsdir_x4.onnx')
                 self.scale = 4
 
             self.model_upscale = onnxruntime.InferenceSession(model_path, None, providers=roop.globals.execution_providers)

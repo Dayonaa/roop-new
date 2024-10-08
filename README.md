@@ -233,4 +233,3 @@ https://github.com/ykk648/face_power<br />
 <br />
 Thanks to all developers!
 
-# roop-new

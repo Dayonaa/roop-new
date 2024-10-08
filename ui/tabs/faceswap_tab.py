@@ -130,8 +130,8 @@ def faceswap_tab():
                             )
                             clip_text = gr.Textbox(
                                 label="List of objects to mask and restore back on fake face",
-                                value="cup,hair,hijab,mouth,lip,finger",
-                                interactive=True,
+                                value="hijab,hair,hand,finger,mouth,eyes,lips,dick",
+                                interactive=False,
                             )
                             bt_preview_mask = gr.Button(
                                 "👥 Show Mask Preview", variant="secondary"
