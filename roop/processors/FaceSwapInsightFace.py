@@ -24,7 +24,7 @@ class FaceSwapInsightFace():
 
         self.plugin_options = plugin_options
         if self.model_swap_insightface is None:
-            model_path = resolve_relative_path('/content/drive/MyDrive/roop-new/models/inswapper_128.onnx')
+            model_path = resolve_relative_path('/kaggle/working/roop-new/models/inswapper_128.onnx')
             graph = onnx.load(model_path).graph
             self.emap = onnx.numpy_helper.to_array(graph.initializer[-1])
             self.devicename = self.plugin_options["devicename"].replace('mps', 'cpu')
