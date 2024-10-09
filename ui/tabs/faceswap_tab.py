@@ -230,7 +230,7 @@ def faceswap_tab():
     mask_right.release(fn=on_mask_right_changed, inputs=[mask_right], show_progress='hidden')
     mask_erosion.release(fn=on_mask_erosion_changed, inputs=[mask_erosion], show_progress='hidden')
     mask_blur.release(fn=on_mask_blur_changed, inputs=[mask_blur], show_progress='hidden')
-    selected_mask_engine.change(fn=on_mask_engine_changed, inputs=[selected_mask_engine], outputs=[clip_text], show_progress='hidden')
+    selected_mask_engine.change(fn=on_mask_engine_changed, inputs=[selected_mask_engine], outputs=[clip_text], show_progress='minimal')
 
     target_faces.select(on_select_target_face, None, None)
     bt_remove_selected_target_face.click(fn=remove_selected_target_face, outputs=[target_faces])
